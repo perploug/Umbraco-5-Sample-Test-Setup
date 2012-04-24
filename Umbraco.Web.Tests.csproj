@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9FE91AAB-A0BC-429A-85FA-7903CE385F74}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umbraco.Web.Tests</RootNamespace>
+    <AssemblyName>Umbraco.Web.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL" />
+    <Reference Include="NSubstitute">
+      <HintPath>..\..\lib\VS sln with Tooling\Site.Extensions.Tests\bin\Debug\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\lib\VS sln with Tooling\Site.Extensions.Tests\bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Umbraco.Cms.Web">
+      <HintPath>..\Umbraco.Web\bin\Umbraco.Cms.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Cms.Web.EmbeddedViewEngine, Version=5.1.0.157, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Umbraco.Web\bin\Umbraco.Cms.Web.EmbeddedViewEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Cms.Web.UI">
+      <HintPath>..\Umbraco.Web\bin\Umbraco.Cms.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Framework">
+      <HintPath>..\Umbraco.Web\bin\Umbraco.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Framework.DependencyManagement.Autofac">
+      <HintPath>..\Umbraco.Web\bin\Umbraco.Framework.DependencyManagement.Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Framework.Persistence, Version=5.1.0.157, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Umbraco.Web\bin\Umbraco.Framework.Persistence.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Framework.Persistence.NHibernate">
+      <HintPath>..\Umbraco.Web\bin\Umbraco.Framework.Persistence.NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Framework.Security, Version=5.1.0.157, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Umbraco.Web\bin\Umbraco.Framework.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Framework.Testing">
+      <HintPath>..\..\lib\VS sln with Tooling\Site.Extensions.Tests\bin\Debug\Umbraco.Framework.Testing.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Hive, Version=5.1.0.157, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Umbraco.Hive.Providers.IO">
+      <HintPath>..\..\20120417-1718-Umbraco51WebApp\bin\Umbraco.Hive.Providers.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Tests.Extensions">
+      <HintPath>..\..\lib\VS sln with Tooling\Site.Extensions.Tests\bin\Debug\Umbraco.Tests.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\FakeControllerContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatusUpdateSurfaceControllerTests.cs" />
+    <Compile Include="Common\SurfaceControllerTestExtensions.cs" />
+    <Compile Include="Common\UmbracoTestBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="App_Data\Umbraco\Config\ClientDependency.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Umbraco\Config\log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Umbraco\Config\umbraco.cms.applications.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Umbraco\Config\umbraco.cms.system.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Umbraco\Config\umbraco.hive.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.157-120419090613.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.157-120419091000.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.157-120419091135.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.157-120419091234.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.157-120419091316.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.157-120419091352.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.157-120419091417.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.157-120419091534.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.157-120419091553.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.157-120419091841.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.157-120419092006.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.160-120418204220.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.160-120418204650.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.160-120418204742.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.160-120418204916.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.160-120418205221.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.160-120418205410.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.160-120418210838.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.160-120418211116.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.160-120418211955.bin" />
+    <None Include="App_Data\Umbraco\HiveConfig\ConfigurationCache-5.1.0.160-120418213801.bin" />
+    <None Include="packages.config" />
+    <None Include="web.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.Web\Umbraco.Web.csproj">
+      <Project>{7363D173-2A71-404D-899B-403499AF99FE}</Project>
+      <Name>Umbraco.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
